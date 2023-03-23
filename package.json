@@ -1,0 +1,34 @@
+{
+  "name": "medbook",
+  "version": "1.0.0",
+  "description": "A Convenient App for Booking Medical Appointments",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Reydigital/MedBook-App.git"
+  },
+  "keywords": [
+    "Medical",
+    "Health",
+    "Booking",
+    "App"
+  ],
+  "author": "Régis-Marie Yapi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Reydigital/MedBook-App/issues"
+  },
+  "homepage": "https://github.com/Reydigital/MedBook-App#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "https": "^1.0.0",
+    "nodemon": "^2.0.22",
+    "request": "^2.88.2",
+    "superheroes": "^3.0.0",
+    "supervillains": "^3.1.0"
+  }
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search A Doctor</title>
+    <style>
+        /* Styles for the search section */
+        .search-section {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .search-section h1 {
+            margin-bottom: 20px;
+        }
+
+        .search-section label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .search-section input[type="text"],
+        .search-section select {
+            padding: 10px;
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .search-section button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Styles for the results section */
+        .results-section {
+            margin: 50px;
+        }
+
+        .results-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .results-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .results-list li {
+            margin-bottom: 30px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .results-list h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .results-list p {
+            margin: 5px 0;
+        }
+
+        /* Styles for the footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f2f2f2;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h3>MediBooker</h3>
+        <section class="search-section">
+            <h1>Find a Doctor or Clinic</h1>
+            <form action="#" method="get">
+                <label for="specialty">Specialty:</label>
+                <input type="text" id="specialty" name="specialty" placeholder="Enter Specialty">
+
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" placeholder="Enter Location">
+
+                <label for="availability">Availability:</label>
+                <select id="availability" name="availability">
+                    <option value="">Select Availability</option>
+                    <option value="morning">Morning</option>
+                    <option value="afternoon">Afternoon</option>
+                    <option value="evening">Evening</option>
+                    <label for="hours">Hours:</label>
+                    <select id="hours" name="hours">
+                        <option value="">Select Hours</option>
+                    </select>
+
+                    <div id="evening-hours" style="display: none;">
+                        <label for="hours">Select Hours:</label>
+                        <input type="time" id="hours" name="hours" min="19:00" max="01:00">
+                    </div>
+
+                    <button type="submit" name="submit">Search</button>
+            </form>
+        </section>
+
+        <section class="results-section">
+            <h2>Search Results</h2>
+            <ul class="results-list">
+                <li>
+                    <h3>Doctor/Clinic Name</h3>
+                    <p>Specialty: </p>
+                    <p>Location: </p>
+                    <p>Availability: </p>
+                    <p>Patient Ratings: </p>
+                    <p>Contact Information: </p>
+                </li>
+                <li>
+                    <h3>Doctor/Clinic Name</h3>
+                    <p>Specialty: </p>
+                    <p>Location: </p>
+                    <p>Availability: </p>
+                    <p>Patient Ratings: </p>
+                    <p>Contact Information: </p>
+                </li>
+                <li>
+                    <h3>Doctor/Clinic Name</h3>
+                    <p>Specialty: </p>
+                    <p>Location: </p>
+                    <p>Availability: </p>
+                    <p>Patient Ratings: </p>
+                    <p>Contact Information: </p>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Doctor/Clinic Search</p>
+    </footer>
+
+    <script>
+        const availabilitySelect = document.getElementById("availability");
+        const hoursSelect = document.getElementById("hours");
+
+        availabilitySelect.addEventListener("change", (event) => {
+            if (event.target.value === "evening") {
+                hoursSelect.innerHTML = `
+              <option value="">Select Hours</option>
+              <option value="19h">19h</option>
+              <option value="20h">20h</option>
+              <option value="21h">21h</option>
+              <option value="22h">22h</option>
+              <option value="23h">23h</option>
+              <option value="00h">00h</option>
+              <option value="01h">01h</option>
+            `;
+            } else {
+                hoursSelect.innerHTML = `
+              <option value="">Select Hours</option>
+            `;
+            }
+        });
+    </script>
+
+</body>
+
+</html>

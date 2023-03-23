@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscriber verification page</title>
+    <style>
+        /* Style for Verify Your Account Section */
+
+        .verify-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .verify-container h1 {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .verify-container p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .verify-options {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .verify-options label {
+            font-size: 24px;
+            margin: 0 20px;
+        }
+
+        .verify-options input[type="radio"] {
+            margin-right: 10px;
+            position: relative;
+            top: 4px;
+        }
+
+        .verify-options input[type="radio"]:checked+span {
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>MediBooker</h3>
+    <div class="verify-container">
+        <h1>Verify Your Account</h1>
+        <p>Please select if you are a patient or a doctor:</p>
+        <div class="verify-options">
+            <label>
+                <input type="radio" name="user-type" value="patient" checked>
+                Patient
+            </label>
+            <label>
+                <input type="radio" name="user-type" value="doctor">
+                Doctor
+            </label>
+        </div>
+        <div class="form-container">
+            <!-- Patient form goes here -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
