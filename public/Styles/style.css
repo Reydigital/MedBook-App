@@ -49,6 +49,7 @@ main {
   max-width: 1200px;
   margin: 120px auto 0;
   text-align: center;
+  padding: 20px;
 }
 
 h1 {
@@ -74,6 +75,7 @@ a {
 a:hover {
   background-color: #0056b3;
 }
+
 footer {
   background-color: #333;
   color: #fff;

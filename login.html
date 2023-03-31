@@ -5,8 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Document</title>
     <style>
+        main {
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            font-weight: 500;
+            margin-bottom: 2vh;
+        }
+
         .signup-form {
             max-width: 400px;
             margin: 0 auto;
@@ -67,19 +79,47 @@
 </head>
 
 <body>
-    <h3>MediBooker</h3>
-    <form class="signup-form" action="/signup" method="post">
-        <h1>Login to your Account</h1>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">MediBooker</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">My Appointments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Log In</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
+        <h2>MediBooker</h2>
+        <form class="signup-form" action="/" method="post">
+            <h1>Login to your Account</h1>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
-        <button type="submit" name="submit">Login</button>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
 
-        <p>Don't have an account? <a href="/signup">Sign up</a></p>
-    </form>
+            <button type="submit" name="submit">Login</button>
+
+            <p>Don't have an account? <a href="/signup">Sign up</a></p>
+        </form>
+    </main>
 </body>
 
 </html>

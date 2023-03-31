@@ -17,6 +17,14 @@ app.get("/patientdashboard", function (req, res) {
     res.sendFile(__dirname + "/patientDashboard.html");
 });
 
+app.get("/booking", function (req, res) {
+    res.sendFile(__dirname + "/booking.html");
+});
+
+app.get("/search", function (req, res) {
+    res.sendFile(__dirname + "/search.html");
+});
+
 app.get("/success", function (req, res) {
     res.sendFile(__dirname + "/success.html");
 });
@@ -27,29 +35,63 @@ app.get("/signup", function (req, res) {
 });
 
 
+app.get("/verify", function (req, res) {
+    res.sendFile(__dirname + "/verify.html");
+});
+
+app.get("/checkemail", function (req, res) {
+    res.sendFile(__dirname + "/checkemail.html");
+});
+
+
+// verify user
 app.post('/signup', (req, res) => {
     const name = req.body.name;
     const email = req.body.email;
-    const message = req.body.message;
+    const password = req.body.password;
 
     console.log(`Name: ${name}`);
     console.log(`Email: ${email}`);
-    console.log(`Message: ${message}`);
+    console.log(`Message: ${password}`);
 
-    res.redirect('/success');
+    res.redirect('/verify');
 });
+
+
+app.post('/verify', (req, res) => {
+    const userType = req.body.usertype;
+
+    console.log(`User Type: ${userType}`);
+
+    res.redirect('/checkemail');
+});
+
+
+app.post('/checkemail', (req, res) => {
+
+    res.redirect('/');
+});
+
+
+app.post('/success', (req, res) => {
+
+
+    res.redirect('/patientdashboard');
+});
+// accessing patient dashboard
 
 app.post('/', (req, res) => {
     const name = req.body.name;
     const email = req.body.email;
-    const message = req.body.message;
+    const password = req.body.password;
 
     console.log(`Name: ${name}`);
     console.log(`Email: ${email}`);
-    console.log(`Message: ${message}`);
+    console.log(`Message: ${password}`);
 
-    res.redirect('/success');
+    res.redirect('/patientdashboard');
 });
+
 
 //Accessing doctor dashboard
 app.get("/doctordashboard", function (req, res) {

@@ -48,24 +48,82 @@
             color: #333;
             font-weight: bold;
         }
+
+        .verify-options {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .verify-options h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .verify-options label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .verify-options input[type="text"],
+        .verify-options input[type="email"],
+        .verify-options input[type="password"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            margin-bottom: 20px;
+        }
+
+        .verify-options button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .verify-options button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .verify-options p {
+            font-size: 14px;
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .verify-options a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
     </style>
 </head>
 
 <body>
-    <h3>MediBooker</h3>
     <div class="verify-container">
         <h1>Verify Your Account</h1>
         <p>Please select if you are a patient or a doctor:</p>
-        <div class="verify-options">
+        <form class="verify-options" action="/verify" method="post">
             <label>
-                <input type="radio" name="user-type" value="patient" checked>
+                <input type="radio" name="usertype" value="patient" checked>
                 Patient
             </label>
             <label>
-                <input type="radio" name="user-type" value="doctor">
+                <input type="radio" name="usertype" value="doctor">
                 Doctor
             </label>
-        </div>
+            <button name="submit" type="submit">Validate</button>
+        </form>
         <div class="form-container">
             <!-- Patient form goes here -->
         </div>
